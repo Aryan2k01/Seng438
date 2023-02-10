@@ -6,10 +6,34 @@ import org.junit.*;
 import org.jmock.Mockery;
 import org.jmock.Expectations;
 import org.jfree.data.KeyedValues;
+import java.security.InvalidParameterException;
+
 import java.util.*;
 
 public class DataUtilitiesTest {
 	
+	 //testing createNumberArray
+    @Test
+    public void testPosCreateNumberArray() {
+    	double [] input = {0,9.99,5}; //double array with 0 and positive values
+    	Number [] expected = {0,9.99,5};//expected number array
+    	Number[] result = DataUtilities.createNumberArray(input);
+        assertArrayEquals(expected,result);
+    }
+    @Test
+    public void testNegCreateNumberArray() {
+    	double [] input = {-7,-9.99,5}; //double array with some negative values
+    	Number [] expected = {-7,-9.99,5};//expected number array
+    	Number[] result = DataUtilities.createNumberArray(input);
+        assertArrayEquals(expected,result);
+    }
+    @Test (expected = InvalidParameterException.class)
+    public void testNullCreateNumberArray() throws InvalidParameterException{
+    	double [] input = {};//null double array 
+    	Number []result = DataUtilities.createNumberArray(input);
+    }
+	
+    //testing getCumulativePercentages
 	@Test
 	public void testPosCumulativePercentages() {
 		// setup
