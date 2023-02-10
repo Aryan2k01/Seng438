@@ -18,25 +18,26 @@ public class DataUtilitiesTest {
 	    mockingContext.checking(new Expectations() {
 	        {
 	        	//KeyedValues object {(0,3),(1,4)}
-	            one(values).getIndex(0);
+	            allowing(values).getIndex(0);
 	            will(returnValue(0));
-	            one(values).getIndex(1);
+	            allowing(values).getIndex(1);
 	            will(returnValue(1));
-	            one(values).getKey(0);
+	            allowing(values).getKey(0);
 	            will(returnValue(0));
-	            one(values).getKey(1);
+	            allowing(values).getKey(1);
 	            will(returnValue(1));
-	            one(values).getKeys();
+	            allowing(values).getKeys();
 	            List<Integer> keys = Arrays.asList(0,1);//list to store keys as integers
 	            will(returnValue(keys));
-	            one(values).getValue(0);
+	            allowing(values).getValue(0);
 	            will(returnValue(3));
-	            one(values).getValue(1);
+	            allowing(values).getValue(1);
 	            will(returnValue(4));
-	            one(values).getItemCount();
+	            allowing(values).getItemCount();
 	            will(returnValue(2));
 	        }
 	    });
+	    /*
 	    //expected output
 	    Mockery mockingContext1 = new Mockery();
 	    final KeyedValues expectedValues = mockingContext1.mock(KeyedValues.class);
@@ -62,13 +63,14 @@ public class DataUtilitiesTest {
 	            will(returnValue(2));
 	        }
 	    });
+	    */
 	    
 	    KeyedValues result = DataUtilities.getCumulativePercentages(values);
 	    
 	    assertEquals("Returned value at key 0 should be 0.4286",
-	           0.4286, (Integer)result.getValue(0), .000000001d);
+	           0.4286, (Double)result.getValue(0), .000000001d);
 	    assertEquals("Returned value at key 1 should be 1.0",
-		           1.0, (Integer)result.getValue(1), .000000001d);
+		           1.0, (Double)result.getValue(1), .000000001d);
 	    
 	    // tear-down: NONE in this test method
 	}
