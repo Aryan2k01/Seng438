@@ -40,21 +40,29 @@ public class ContainsTest {
 	// Mutation Tests
 	@Test
 	public void testLowerGetterMutation() {
-		double result = this.exampleRange.getLowerBound();
 		assertEquals(0.0, this.exampleRange.getLowerBound(), .000000001d);
 	}
 	@Test
 	public void testUpperGetterMutation() {
-		double result = this.exampleRange.getUpperBound();
 		assertEquals(100.0, this.exampleRange.getUpperBound(), .000000001d);
 	}
 	@Test
-	public void testLowerBoundMutation() {
+	public void testLowerGetterTwice() {
+		double result = this.exampleRange.getLowerBound();
+		assertEquals(result, this.exampleRange.getLowerBound(), .000000001d);
+	}
+	@Test
+	public void testUpperGetterTwice() {
+		double result = this.exampleRange.getUpperBound();
+		assertEquals(result, this.exampleRange.getUpperBound(), .000000001d);
+	}
+	@Test
+	public void testContainsLowerBoundMutation() {
 		boolean result = this.exampleRange.contains(50.0);
 		assertEquals(0.0, this.exampleRange.getLowerBound(), .000000001d);
 	}
 	@Test
-	public void testUpperBoundMutation() {
+	public void testContainsUpperBoundMutation() {
 		boolean result = this.exampleRange.contains(50.0);
 		assertEquals(100.0, this.exampleRange.getUpperBound(), .000000001d);
 	}
