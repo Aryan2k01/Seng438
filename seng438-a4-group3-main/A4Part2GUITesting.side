@@ -1,0 +1,987 @@
+{
+  "id": "f83409d1-eef5-4913-900e-523c67a973c4",
+  "version": "2.0",
+  "name": "A4Part2GUITesting",
+  "url": "https://www.amazon.ca/",
+  "tests": [{
+    "id": "4099bbb5-4764-4ca6-8a72-0d9c4cf68891",
+    "name": "LoginInvalidEmail",
+    "commands": [{
+      "id": "bff6ba74-fe74-401f-b5f1-e1d4fd5fdbae",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.ca/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.ca%2F%3Fref_%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=caflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "54bf09fb-6575-4822-847b-bf144929504d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x852",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4537afef-b1d5-4e5d-9f3d-54f6867f401f",
+      "comment": "",
+      "command": "type",
+      "target": "id=ap_email",
+      "targets": [
+        ["id=ap_email", "id"],
+        ["name=email", "name"],
+        ["css=#ap_email", "css:finder"],
+        ["xpath=//input[@id='ap_email']", "xpath:attributes"],
+        ["xpath=//div[@id='authportal-main-section']/div[2]/div/div/form/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "email"
+    }, {
+      "id": "1d0266e9-0384-4b00-9d50-d4b2733ef026",
+      "comment": "",
+      "command": "click",
+      "target": "css=.a-button-inner > #continue",
+      "targets": [
+        ["css=.a-button-inner > #continue", "css:finder"],
+        ["xpath=//input[@id='continue']", "xpath:attributes"],
+        ["xpath=//span[@id='continue']/span/input", "xpath:idRelative"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aaa83967-f366-47bf-bc8e-6ca5d00d1a94",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.a-list-item",
+      "targets": [
+        ["css=.a-list-item", "css:finder"],
+        ["xpath=//div[@id='auth-error-message-box']/div/div/ul/li/span", "xpath:idRelative"],
+        ["xpath=//li/span", "xpath:position"],
+        ["xpath=//span[contains(.,'We cannot find an account with that e-mail address')]", "xpath:innerText"]
+      ],
+      "value": "We cannot find an account with that e-mail address"
+    }]
+  }, {
+    "id": "2086fc1f-8931-448f-937d-5c48f6b77a9d",
+    "name": "LoginWrongPassword",
+    "commands": [{
+      "id": "c76836a5-6510-441d-b226-ded960e1c148",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1fd35b79-35d8-4ccc-919a-ae91b9ff6682",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x852",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a1d9309f-1d97-4ee3-a0d2-6a29c589100a",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=#nav-signin-tooltip .nav-action-inner",
+      "targets": [
+        ["css=#nav-signin-tooltip .nav-action-inner", "css:finder"],
+        ["xpath=//div[@id='nav-signin-tooltip']/a/span", "xpath:idRelative"],
+        ["xpath=//div[13]/div[2]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2fc08fdd-545e-4554-a435-35a7d23159a8",
+      "comment": "",
+      "command": "click",
+      "target": "css=#nav-signin-tooltip .nav-action-inner",
+      "targets": [
+        ["css=#nav-signin-tooltip .nav-action-inner", "css:finder"],
+        ["xpath=//div[@id='nav-signin-tooltip']/a/span", "xpath:idRelative"],
+        ["xpath=//div[13]/div[2]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "32ba402b-71a8-4088-9295-85a909eceedf",
+      "comment": "",
+      "command": "type",
+      "target": "id=ap_email",
+      "targets": [
+        ["id=ap_email", "id"],
+        ["name=email", "name"],
+        ["css=#ap_email", "css:finder"],
+        ["xpath=//input[@id='ap_email']", "xpath:attributes"],
+        ["xpath=//div[@id='authportal-main-section']/div[2]/div/div/form/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "utsenguun@gmail.com"
+    }, {
+      "id": "9222a820-58a0-4c7e-be35-3844bac67146",
+      "comment": "",
+      "command": "click",
+      "target": "css=.a-button-inner > #continue",
+      "targets": [
+        ["css=.a-button-inner > #continue", "css:finder"],
+        ["xpath=//input[@id='continue']", "xpath:attributes"],
+        ["xpath=//span[@id='continue']/span/input", "xpath:idRelative"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4ff8d147-56e2-4a25-9726-4710ad675e33",
+      "comment": "",
+      "command": "type",
+      "target": "id=ap_password",
+      "targets": [
+        ["id=ap_password", "id"],
+        ["name=password", "name"],
+        ["css=#ap_password", "css:finder"],
+        ["xpath=//input[@id='ap_password']", "xpath:attributes"],
+        ["xpath=//div[@id='authportal-main-section']/div[2]/div/div/div/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": "password"
+    }, {
+      "id": "b7da6b3f-829d-4e14-a857-a3da0ed6b21d",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=ap_password",
+      "targets": [
+        ["id=ap_password", "id"],
+        ["name=password", "name"],
+        ["css=#ap_password", "css:finder"],
+        ["xpath=//input[@id='ap_password']", "xpath:attributes"],
+        ["xpath=//div[@id='authportal-main-section']/div[2]/div/div/div/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "15f627ce-062d-4b87-9047-a28a71d2184e",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.a-list-item",
+      "targets": [
+        ["css=.a-list-item", "css:finder"],
+        ["xpath=//div[@id='auth-error-message-box']/div/div/ul/li/span", "xpath:idRelative"],
+        ["xpath=//li/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Your password is incorrect')]", "xpath:innerText"]
+      ],
+      "value": "Your password is incorrect"
+    }]
+  }, {
+    "id": "542139f5-6429-4363-8c64-d5978b9b56c3",
+    "name": "SearchInvalid",
+    "commands": [{
+      "id": "aed64806-6b93-4c1c-8451-2c96db8086c6",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6a8008c8-7ebc-429a-8a7d-fb5a5e06b8e3",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x852",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "785cd06c-c9db-4c3f-9bce-f4a89640738c",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "02bd8256-323a-4a22-af62-ca6a8dfa7205",
+      "comment": "",
+      "command": "type",
+      "target": "id=twotabsearchtextbox",
+      "targets": [
+        ["id=twotabsearchtextbox", "id"],
+        ["name=field-keywords", "name"],
+        ["css=#twotabsearchtextbox", "css:finder"],
+        ["xpath=//input[@id='twotabsearchtextbox']", "xpath:attributes"],
+        ["xpath=//form[@id='nav-search-bar-form']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "kajsj8sdnd8ufnd8ufndfns98dufndfsdfsd"
+    }, {
+      "id": "948db3f0-7e6f-4765-a13b-9ee974a91f84",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=twotabsearchtextbox",
+      "targets": [
+        ["id=twotabsearchtextbox", "id"],
+        ["name=field-keywords", "name"],
+        ["css=#twotabsearchtextbox", "css:finder"],
+        ["xpath=//input[@id='twotabsearchtextbox']", "xpath:attributes"],
+        ["xpath=//form[@id='nav-search-bar-form']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "6adefc23-d13c-433b-991f-df6c8b758ffe",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.a-row > .a-size-medium:nth-child(1)",
+      "targets": [
+        ["css=.a-row > .a-size-medium:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='search']/div/div/div/span/div/div/div/div/div/div/span", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/div/div/span", "xpath:position"]
+      ],
+      "value": "No results for "
+    }]
+  }, {
+    "id": "cbb12180-79a3-47c4-8b9d-786a0f485591",
+    "name": "SearchJenga",
+    "commands": [{
+      "id": "d79bd58f-d7d8-480f-a149-836e408faabc",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "222035ca-44ff-4e21-af2a-bb6a57574cac",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x852",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "47c4ad72-cfa3-4404-b2c2-6159b5ae0d5c",
+      "comment": "",
+      "command": "type",
+      "target": "id=twotabsearchtextbox",
+      "targets": [
+        ["id=twotabsearchtextbox", "id"],
+        ["name=field-keywords", "name"],
+        ["css=#twotabsearchtextbox", "css:finder"],
+        ["xpath=//input[@id='twotabsearchtextbox']", "xpath:attributes"],
+        ["xpath=//form[@id='nav-search-bar-form']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "jenga"
+    }, {
+      "id": "90fd73a0-bfe1-4f90-9214-cc3d923bbdca",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=twotabsearchtextbox",
+      "targets": [
+        ["id=twotabsearchtextbox", "id"],
+        ["name=field-keywords", "name"],
+        ["css=#twotabsearchtextbox", "css:finder"],
+        ["xpath=//input[@id='twotabsearchtextbox']", "xpath:attributes"],
+        ["xpath=//form[@id='nav-search-bar-form']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "509ea97d-d07e-41fe-b036-68dddf7a6340",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.a-section:nth-child(2) .a-size-medium-plus",
+      "targets": [
+        ["css=.a-section:nth-child(2) .a-size-medium-plus", "css:finder"],
+        ["xpath=//div[@id='search']/div/div/div/span/div/div[2]/div/span/div/div/span", "xpath:idRelative"],
+        ["xpath=//span/div/div/span", "xpath:position"]
+      ],
+      "value": "RESULTS"
+    }, {
+      "id": "d4c7085e-b117-4342-86a4-2a829e31a91b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.rush-component > .rush-component .s-product-image-container:nth-child(2) .s-image",
+      "targets": [
+        ["css=.rush-component > .rush-component .s-product-image-container:nth-child(2) .s-image", "css:finder"],
+        ["xpath=//img[@alt='Sponsored Ad – Hasbro Gaming: Jenga Classic Game']", "xpath:img"],
+        ["xpath=//div[@id='search']/div/div/div/span/div/div[3]/div/div/div/div/div/div/div[2]/span/a/div/img", "xpath:idRelative"],
+        ["xpath=//span/a/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "b00bb044-30b0-43e1-b3d6-c06997d01162",
+    "name": "AddToCartOneItem",
+    "commands": [{
+      "id": "f3309aa6-caf3-466e-b1d6-7c6a14b8a355",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "71b61ddd-53e3-4c0d-824b-2606c9423b38",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x852",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ba4c444b-2358-42dd-afd4-714b75d3fcae",
+      "comment": "",
+      "command": "type",
+      "target": "id=twotabsearchtextbox",
+      "targets": [
+        ["id=twotabsearchtextbox", "id"],
+        ["name=field-keywords", "name"],
+        ["css=#twotabsearchtextbox", "css:finder"],
+        ["xpath=//input[@id='twotabsearchtextbox']", "xpath:attributes"],
+        ["xpath=//form[@id='nav-search-bar-form']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "jenga"
+    }, {
+      "id": "3d689372-8a44-4f3c-8504-955f0ea97496",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=twotabsearchtextbox",
+      "targets": [
+        ["id=twotabsearchtextbox", "id"],
+        ["name=field-keywords", "name"],
+        ["css=#twotabsearchtextbox", "css:finder"],
+        ["xpath=//input[@id='twotabsearchtextbox']", "xpath:attributes"],
+        ["xpath=//form[@id='nav-search-bar-form']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "be1f2aee-ceb6-43cf-86aa-de1515535f94",
+      "comment": "",
+      "command": "click",
+      "target": "css=.rush-component > .rush-component .s-product-image-container:nth-child(2) .s-image",
+      "targets": [
+        ["css=.rush-component > .rush-component .s-product-image-container:nth-child(2) .s-image", "css:finder"],
+        ["xpath=//img[@alt='Sponsored Ad – Hasbro Gaming: Jenga Classic Game']", "xpath:img"],
+        ["xpath=//div[@id='search']/div/div/div/span/div/div[3]/div/div/div/div/div/div/div[2]/span/a/div/img", "xpath:idRelative"],
+        ["xpath=//span/a/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "612913d2-7d36-4f36-a78a-fe67cd4fa451",
+      "comment": "",
+      "command": "click",
+      "target": "id=add-to-cart-button",
+      "targets": [
+        ["id=add-to-cart-button", "id"],
+        ["name=submit.add-to-cart", "name"],
+        ["css=#add-to-cart-button", "css:finder"],
+        ["xpath=//input[@id='add-to-cart-button']", "xpath:attributes"],
+        ["xpath=//span[@id='submit.add-to-cart']/span/input", "xpath:idRelative"],
+        ["xpath=//span/span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "207963da-9ce4-4a50-873e-2521cbbab3a8",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.a-size-medium-plus",
+      "targets": [
+        ["css=.a-size-medium-plus", "css:finder"],
+        ["xpath=//div[@id='NATC_SMART_WAGON_CONF_MSG_SUCCESS']/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div[2]/div/div/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Added to Cart')]", "xpath:innerText"]
+      ],
+      "value": "Added to Cart"
+    }]
+  }, {
+    "id": "876f14e8-8ce9-478f-b0ac-853d489f0b99",
+    "name": "AddToCartFiveItems",
+    "commands": [{
+      "id": "6837f982-0075-444d-bcf5-22e0f9a05f96",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.ca/s?k=jenga&crid=DNCTQFAEGA11&sprefix=j%2Caps%2C957&ref=nb_sb_noss_2",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d3a3edf8-1b46-4439-9aa5-5c103fbfc897",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x852",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b6507a8f-5935-4736-be78-81ad181744a2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.rush-component > .rush-component .s-product-image-container:nth-child(2) .s-image",
+      "targets": [
+        ["css=.rush-component > .rush-component .s-product-image-container:nth-child(2) .s-image", "css:finder"],
+        ["xpath=//img[@alt='Sponsored Ad – Hasbro Gaming: Jenga Classic Game']", "xpath:img"],
+        ["xpath=//div[@id='search']/div/div/div/span/div/div[3]/div/div/div/div/div/div/div[2]/span/a/div/img", "xpath:idRelative"],
+        ["xpath=//span/a/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "94398ba7-21e6-48d0-ae32-fd97d91bb7a0",
+      "comment": "",
+      "command": "select",
+      "target": "id=quantity",
+      "targets": [],
+      "value": "label=5"
+    }, {
+      "id": "17bef53e-39bc-421e-ad93-0c538f370315",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=add-to-cart-button",
+      "targets": [
+        ["id=add-to-cart-button", "id"],
+        ["name=submit.add-to-cart", "name"],
+        ["css=#add-to-cart-button", "css:finder"],
+        ["xpath=//input[@id='add-to-cart-button']", "xpath:attributes"],
+        ["xpath=//span[@id='submit.add-to-cart']/span/input", "xpath:idRelative"],
+        ["xpath=//div[13]/div/span/span/span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "20e6c5f4-a7f3-412b-80df-470932452f28",
+      "comment": "",
+      "command": "click",
+      "target": "id=add-to-cart-button",
+      "targets": [
+        ["id=add-to-cart-button", "id"],
+        ["name=submit.add-to-cart", "name"],
+        ["css=#add-to-cart-button", "css:finder"],
+        ["xpath=//input[@id='add-to-cart-button']", "xpath:attributes"],
+        ["xpath=//span[@id='submit.add-to-cart']/span/input", "xpath:idRelative"],
+        ["xpath=//div[13]/div/span/span/span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f35f84c8-c9ec-4137-9e6b-a14827cf2c9d",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.a-size-medium-plus",
+      "targets": [
+        ["css=.a-size-medium-plus", "css:finder"],
+        ["xpath=//div[@id='NATC_SMART_WAGON_CONF_MSG_SUCCESS']/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div[2]/div/div/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Added to Cart')]", "xpath:innerText"]
+      ],
+      "value": "Added to Cart"
+    }]
+  }, {
+    "id": "37108af6-fc2b-45de-8161-a9c60b0d5e1b",
+    "name": "ChangeLanguageEnglish",
+    "commands": [{
+      "id": "99ec6e05-4400-4d1d-a155-4f895f986738",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c64416fe-6f2b-4061-a1b2-0e3894f2157d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x852",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "936f5ee7-4c01-4ce5-9af0-256300225aca",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=#nav-signin-tooltip .nav-action-inner",
+      "targets": [
+        ["css=#nav-signin-tooltip .nav-action-inner", "css:finder"],
+        ["xpath=//div[@id='nav-signin-tooltip']/a/span", "xpath:idRelative"],
+        ["xpath=//div[13]/div[2]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7da81d74-bcbf-43ef-bfaf-15cdbfbe9411",
+      "comment": "",
+      "command": "click",
+      "target": "css=.icp-nav-link-inner > .nav-line-2",
+      "targets": [
+        ["css=.icp-nav-link-inner > .nav-line-2", "css:finder"],
+        ["xpath=//a[@id='icp-nav-flyout']/span/span[2]", "xpath:idRelative"],
+        ["xpath=//span/span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "494ba261-125f-4584-b9fd-0534ba7eb07a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.a-row:nth-child(4) .a-icon",
+      "targets": [
+        ["css=.a-row:nth-child(4) .a-icon", "css:finder"],
+        ["xpath=//div[@id='icp-language-settings']/div[2]/div/label/i", "xpath:idRelative"],
+        ["xpath=//label/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7db95539-526f-4627-bfb9-20d33ec35b51",
+      "comment": "",
+      "command": "click",
+      "target": "css=#icp-save-button .a-button-input",
+      "targets": [
+        ["css=#icp-save-button .a-button-input", "css:finder"],
+        ["xpath=(//input[@type='submit'])[3]", "xpath:attributes"],
+        ["xpath=//span[@id='icp-save-button']/span/input", "xpath:idRelative"],
+        ["xpath=//span[2]/span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d58be215-dc20-41e4-b19c-be885a23835f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.hm-icon-label",
+      "targets": [
+        ["css=.hm-icon-label", "css:finder"],
+        ["xpath=//a[@id='nav-hamburger-menu']/span", "xpath:idRelative"],
+        ["xpath=//div[4]/div/a/span", "xpath:position"]
+      ],
+      "value": "All"
+    }]
+  }, {
+    "id": "4b5b9182-643b-4cf7-8a19-6a64bde7979d",
+    "name": "SelectAddressInvalid",
+    "commands": [{
+      "id": "19b6eb07-92ac-4a28-8650-63a6048c4576",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9455cb5e-9882-492d-9233-120aa0462bdb",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x852",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "409ed955-dfa8-49b7-aa22-d0bced5f6c17",
+      "comment": "",
+      "command": "click",
+      "target": "id=glow-ingress-line2",
+      "targets": [
+        ["id=glow-ingress-line2", "id"],
+        ["css=#glow-ingress-line2", "css:finder"],
+        ["xpath=//span[@id='glow-ingress-line2']", "xpath:attributes"],
+        ["xpath=//div[@id='glow-ingress-block']/span[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b98cfeb-9f0b-4079-aef0-07d69f758ce2",
+      "comment": "",
+      "command": "click",
+      "target": "id=GLUXZipUpdateInput_0",
+      "targets": [
+        ["id=GLUXZipUpdateInput_0", "id"],
+        ["css=#GLUXZipUpdateInput_0", "css:finder"],
+        ["xpath=//input[@id='GLUXZipUpdateInput_0']", "xpath:attributes"],
+        ["xpath=//div[@id='GLUXZipInputSection']/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "54c3c8d1-e4e9-4d0e-a0ea-0cc56b3f6f16",
+      "comment": "",
+      "command": "type",
+      "target": "id=GLUXZipUpdateInput_0",
+      "targets": [
+        ["id=GLUXZipUpdateInput_0", "id"],
+        ["css=#GLUXZipUpdateInput_0", "css:finder"],
+        ["xpath=//input[@id='GLUXZipUpdateInput_0']", "xpath:attributes"],
+        ["xpath=//div[@id='GLUXZipInputSection']/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "the"
+    }, {
+      "id": "aaeaa5b0-6c8e-4fe0-bba7-98845a400541",
+      "comment": "",
+      "command": "type",
+      "target": "id=GLUXZipUpdateInput_1",
+      "targets": [
+        ["id=GLUXZipUpdateInput_1", "id"],
+        ["css=#GLUXZipUpdateInput_1", "css:finder"],
+        ["xpath=//input[@id='GLUXZipUpdateInput_1']", "xpath:attributes"],
+        ["xpath=//div[@id='GLUXZipInputSection']/div/input[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input[2]", "xpath:position"]
+      ],
+      "value": "the"
+    }, {
+      "id": "68d95a77-3d63-4c6c-ae34-bdd95c411def",
+      "comment": "",
+      "command": "click",
+      "target": "css=#GLUXZipUpdate .a-button-input",
+      "targets": [
+        ["css=#GLUXZipUpdate .a-button-input", "css:finder"],
+        ["xpath=(//input[@type='submit'])[4]", "xpath:attributes"],
+        ["xpath=//span[@id='GLUXZipUpdate']/span/input", "xpath:idRelative"],
+        ["xpath=//div[2]/span/span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "065a9a42-c41a-4ecf-afbb-8f2c7f3924f5",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#GLUXZipError .a-box-inner > div",
+      "targets": [
+        ["css=#GLUXZipError .a-box-inner > div", "css:finder"],
+        ["xpath=//span[@id='GLUXZipError']/div/div/div", "xpath:idRelative"],
+        ["xpath=//span/div/div/div", "xpath:position"]
+      ],
+      "value": "Please enter a valid Canada postal code"
+    }]
+  }, {
+    "id": "cf1f559e-58fb-40ed-adb7-9668b2534b7d",
+    "name": "SelectAddressValid",
+    "commands": [{
+      "id": "e8833b6e-55ae-49f9-afa6-85063ab46375",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3be8aca1-6dd1-4835-8dc3-6830b928514a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x852",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "58349532-3efd-49f6-a4ba-18772fbcc105",
+      "comment": "",
+      "command": "click",
+      "target": "id=glow-ingress-line2",
+      "targets": [
+        ["id=glow-ingress-line2", "id"],
+        ["css=#glow-ingress-line2", "css:finder"],
+        ["xpath=//span[@id='glow-ingress-line2']", "xpath:attributes"],
+        ["xpath=//div[@id='glow-ingress-block']/span[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "21fb3e61-6d6e-4e2a-b138-e2bf30f51d4a",
+      "comment": "",
+      "command": "click",
+      "target": "id=GLUXZipUpdateInput_0",
+      "targets": [
+        ["id=GLUXZipUpdateInput_0", "id"],
+        ["css=#GLUXZipUpdateInput_0", "css:finder"],
+        ["xpath=//input[@id='GLUXZipUpdateInput_0']", "xpath:attributes"],
+        ["xpath=//div[@id='GLUXZipInputSection']/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "70b96f2c-849b-4f05-93cf-eb959045ef0f",
+      "comment": "",
+      "command": "type",
+      "target": "id=GLUXZipUpdateInput_0",
+      "targets": [
+        ["id=GLUXZipUpdateInput_0", "id"],
+        ["css=#GLUXZipUpdateInput_0", "css:finder"],
+        ["xpath=//input[@id='GLUXZipUpdateInput_0']", "xpath:attributes"],
+        ["xpath=//div[@id='GLUXZipInputSection']/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "T3B"
+    }, {
+      "id": "3d5bc232-e03c-4d95-8c00-8bbcece5eb48",
+      "comment": "",
+      "command": "type",
+      "target": "id=GLUXZipUpdateInput_1",
+      "targets": [
+        ["id=GLUXZipUpdateInput_1", "id"],
+        ["css=#GLUXZipUpdateInput_1", "css:finder"],
+        ["xpath=//input[@id='GLUXZipUpdateInput_1']", "xpath:attributes"],
+        ["xpath=//div[@id='GLUXZipInputSection']/div/input[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input[2]", "xpath:position"]
+      ],
+      "value": "6B2"
+    }, {
+      "id": "5a4bc399-0269-4557-b1d2-531d3e97bb65",
+      "comment": "",
+      "command": "click",
+      "target": "css=#GLUXZipUpdate .a-button-input",
+      "targets": [
+        ["css=#GLUXZipUpdate .a-button-input", "css:finder"],
+        ["xpath=(//input[@type='submit'])[4]", "xpath:attributes"],
+        ["xpath=//span[@id='GLUXZipUpdate']/span/input", "xpath:idRelative"],
+        ["xpath=//div[2]/span/span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3ce69263-078f-4a4a-a80e-8eb8d9551b78",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=glow-ingress-line1",
+      "targets": [
+        ["id=glow-ingress-line1", "id"],
+        ["css=#glow-ingress-line1", "css:finder"],
+        ["xpath=//span[@id='glow-ingress-line1']", "xpath:attributes"],
+        ["xpath=//div[@id='glow-ingress-block']/span", "xpath:idRelative"],
+        ["xpath=//a/div[2]/span", "xpath:position"]
+      ],
+      "value": "Deliver to"
+    }]
+  }, {
+    "id": "1fa0dc3c-96d4-4402-b6cb-1da0efa39ae6",
+    "name": "ChangeLanguageFrench",
+    "commands": [{
+      "id": "d3f34d74-4bda-4170-a864-31642a2d95b0",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "523ba69c-89b9-4328-986c-3153d5085b88",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x852",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8dec886d-71be-494c-8f9a-385e1cc91e4a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.icp-nav-flag",
+      "targets": [
+        ["css=.icp-nav-flag", "css:finder"],
+        ["xpath=//a[@id='icp-nav-flyout']/span/span[2]/span", "xpath:idRelative"],
+        ["xpath=//span[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6a85a0f6-5119-4963-850f-7de7a7035f6b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.a-row:nth-child(6) .a-icon",
+      "targets": [
+        ["css=.a-row:nth-child(6) .a-icon", "css:finder"],
+        ["xpath=//div[@id='icp-language-settings']/div[3]/div/label/i", "xpath:idRelative"],
+        ["xpath=//div[3]/div/label/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f899ebac-0b64-48b6-9929-b12b2e90cce5",
+      "comment": "",
+      "command": "click",
+      "target": "css=#icp-save-button .a-button-input",
+      "targets": [
+        ["css=#icp-save-button .a-button-input", "css:finder"],
+        ["xpath=(//input[@type='submit'])[3]", "xpath:attributes"],
+        ["xpath=//span[@id='icp-save-button']/span/input", "xpath:idRelative"],
+        ["xpath=//span[2]/span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1a31bb77-23b9-4197-b0d1-3aed3a2d2e64",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.hm-icon-label",
+      "targets": [
+        ["css=.hm-icon-label", "css:finder"],
+        ["xpath=//a[@id='nav-hamburger-menu']/span", "xpath:idRelative"],
+        ["xpath=//div[4]/div/a/span", "xpath:position"]
+      ],
+      "value": "Toutes"
+    }]
+  }, {
+    "id": "f4fe055c-0adb-41f7-9e6f-36235af43b09",
+    "name": "SignInPromptPurchase",
+    "commands": [{
+      "id": "0c928524-60da-4dd8-82dc-7b97d2485149",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b0c66326-43a8-4233-8786-483ad2f8fe74",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x852",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "075b775a-8679-4209-99ec-364408d866c0",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Customer Service",
+      "targets": [
+        ["linkText=Customer Service", "linkText"],
+        ["css=.nav-a:nth-child(5)", "css:finder"],
+        ["xpath=//a[contains(text(),'Customer Service')]", "xpath:link"],
+        ["xpath=//div[@id='nav-xshop']/a[4]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/gp/help/customer/display.html?ref_=nav_cs_help')]", "xpath:href"],
+        ["xpath=//div[2]/div/a[4]", "xpath:position"],
+        ["xpath=//a[contains(.,'Customer Service')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "50a2d791-1755-4912-b268-78c5317d47fb",
+      "comment": "",
+      "command": "click",
+      "target": "id=twotabsearchtextbox",
+      "targets": [
+        ["id=twotabsearchtextbox", "id"],
+        ["name=field-keywords", "name"],
+        ["css=#twotabsearchtextbox", "css:finder"],
+        ["xpath=//input[@id='twotabsearchtextbox']", "xpath:attributes"],
+        ["xpath=//form[@id='nav-search-bar-form']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6e42d710-b572-4bd2-b91c-ecb458f7f358",
+      "comment": "",
+      "command": "type",
+      "target": "id=twotabsearchtextbox",
+      "targets": [
+        ["id=twotabsearchtextbox", "id"],
+        ["name=field-keywords", "name"],
+        ["css=#twotabsearchtextbox", "css:finder"],
+        ["xpath=//input[@id='twotabsearchtextbox']", "xpath:attributes"],
+        ["xpath=//form[@id='nav-search-bar-form']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "jenga"
+    }, {
+      "id": "ebbcf359-b452-4242-b1b3-4bbebf3be7de",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=twotabsearchtextbox",
+      "targets": [
+        ["id=twotabsearchtextbox", "id"],
+        ["name=field-keywords", "name"],
+        ["css=#twotabsearchtextbox", "css:finder"],
+        ["xpath=//input[@id='twotabsearchtextbox']", "xpath:attributes"],
+        ["xpath=//form[@id='nav-search-bar-form']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "f742a8fa-b0bc-4949-8164-413fe5eb2386",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.rush-component > .rush-component .s-product-image-container:nth-child(2) .a-section",
+      "targets": [
+        ["css=.rush-component > .rush-component .s-product-image-container:nth-child(2) .a-section", "css:finder"],
+        ["xpath=//div[@id='search']/div/div/div/span/div/div[3]/div/div/div/div/div/div/div[2]/span/a/div", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/div[2]/span/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6c5fe0bd-925b-413c-b9fc-c35937abd298",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.rush-component > .rush-component .s-product-image-container:nth-child(2) .a-section",
+      "targets": [
+        ["css=.rush-component > .rush-component .s-product-image-container:nth-child(2) .a-section", "css:finder"],
+        ["xpath=//div[@id='search']/div/div/div/span/div/div[3]/div/div/div/div/div/div/div[2]/span/a/div", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/div[2]/span/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a0c51bca-5f5d-4d03-9a10-c987390b36f0",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.rush-component > .rush-component .s-product-image-container:nth-child(2) .s-image",
+      "targets": [
+        ["css=.rush-component > .rush-component .s-product-image-container:nth-child(2) .s-image", "css:finder"],
+        ["xpath=//img[@alt='Sponsored Ad – Hasbro Gaming: Jenga Classic Game']", "xpath:img"],
+        ["xpath=//div[@id='search']/div/div/div/span/div/div[3]/div/div/div/div/div/div/div[2]/span/a/div/img", "xpath:idRelative"],
+        ["xpath=//span/a/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "16ea2afd-b743-4a36-aabc-b88315705017",
+      "comment": "",
+      "command": "click",
+      "target": "css=.rush-component > .rush-component .s-product-image-container:nth-child(2) .s-image",
+      "targets": [
+        ["css=.rush-component > .rush-component .s-product-image-container:nth-child(2) .s-image", "css:finder"],
+        ["xpath=//img[@alt='Sponsored Ad – Hasbro Gaming: Jenga Classic Game']", "xpath:img"],
+        ["xpath=//div[@id='search']/div/div/div/span/div/div[3]/div/div/div/div/div/div/div[2]/span/a/div/img", "xpath:idRelative"],
+        ["xpath=//span/a/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "38c91033-61dc-4df2-a1bb-608de66045f6",
+      "comment": "",
+      "command": "click",
+      "target": "id=buy-now-button",
+      "targets": [
+        ["id=buy-now-button", "id"],
+        ["name=submit.buy-now", "name"],
+        ["css=#buy-now-button", "css:finder"],
+        ["xpath=//input[@id='buy-now-button']", "xpath:attributes"],
+        ["xpath=//span[@id='submit.buy-now']/span/input", "xpath:idRelative"],
+        ["xpath=//span[2]/span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b5c64101-820b-4a2f-ab81-59016a4fdcbd",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.a-spacing-small:nth-child(1)",
+      "targets": [
+        ["css=.a-spacing-small:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='authportal-main-section']/div[2]/div/div/form/div/div/div/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": "Sign in"
+    }]
+  }, {
+    "id": "216bfe4c-ebb9-4ff1-af8e-678d827856d7",
+    "name": "SignInPromptReturnsOrders",
+    "commands": [{
+      "id": "4a425956-83ad-4f7a-9635-8d62afb5b635",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9c2aed49-372a-4380-a70a-291d62203a1f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x852",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2cd28747-4018-4601-944c-198f6dcb10fc",
+      "comment": "",
+      "command": "click",
+      "target": "css=#nav-orders > .nav-line-1",
+      "targets": [
+        ["css=#nav-orders > .nav-line-1", "css:finder"],
+        ["xpath=//a[@id='nav-orders']/span", "xpath:idRelative"],
+        ["xpath=//a[3]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Returns')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8c152fd4-67d3-4639-a7a3-609177c4925a",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.a-spacing-small:nth-child(1)",
+      "targets": [
+        ["css=.a-spacing-small:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='authportal-main-section']/div[2]/div/div/form/div/div/div/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": "Sign in"
+    }]
+  }],
+  "suites": [{
+    "id": "e294f74b-412b-4fd5-9337-b45c3309b17d",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://www.costco.ca/", "https://www.amazon.ca/"],
+  "plugins": []
+}
