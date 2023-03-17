@@ -973,6 +973,70 @@
       ],
       "value": "Sign in"
     }]
+  }, {
+    "id": "e47598f2-3952-4d74-a444-de1b51b16e0a",
+    "name": "SearchMultiple",
+    "commands": [{
+      "id": "2acc987b-75e7-4cac-b8b8-e0f846f166ba",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "258beb8a-cee8-441f-a87b-02215da782dd",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x852",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "294abf2f-caf8-4609-9a4e-30bdc5e11030",
+      "comment": "",
+      "command": "type",
+      "target": "id=twotabsearchtextbox",
+      "targets": [
+        ["id=twotabsearchtextbox", "id"],
+        ["name=field-keywords", "name"],
+        ["css=#twotabsearchtextbox", "css:finder"],
+        ["xpath=//input[@id='twotabsearchtextbox']", "xpath:attributes"],
+        ["xpath=//form[@id='nav-search-bar-form']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "cat dog toy"
+    }, {
+      "id": "c0fd2689-e2e3-4eb6-9269-edded34836c7",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=twotabsearchtextbox",
+      "targets": [
+        ["id=twotabsearchtextbox", "id"],
+        ["name=field-keywords", "name"],
+        ["css=#twotabsearchtextbox", "css:finder"],
+        ["xpath=//input[@id='twotabsearchtextbox']", "xpath:attributes"],
+        ["xpath=//form[@id='nav-search-bar-form']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "45cdfbaa-17d3-44ec-852f-e7ba6894d1cb",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,130)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "673882a6-fd51-41a0-a9a8-4dc6083140e9",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.a-color-state",
+      "targets": [
+        ["css=.a-color-state", "css:finder"],
+        ["xpath=//div[@id='search']/span/div/h1/div/div/div/div/span[3]", "xpath:idRelative"],
+        ["xpath=//div/span[3]", "xpath:position"]
+      ],
+      "value": "\"cat dog toy\""
+    }]
   }],
   "suites": [{
     "id": "e294f74b-412b-4fd5-9337-b45c3309b17d",
