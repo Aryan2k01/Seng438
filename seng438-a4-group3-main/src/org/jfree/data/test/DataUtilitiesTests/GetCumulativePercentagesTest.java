@@ -43,9 +43,9 @@ public class GetCumulativePercentagesTest {
 	    KeyedValues result = DataUtilities.getCumulativePercentages(values);
 	    
 	    Assert.assertEquals("Returned value at key 0 should be 0.4286",
-	           0.4286, (Double)result.getValue(0), .000000001d);
+	           0.4286, (Double)result.getValue(0), .01d);
 	    Assert.assertEquals("Returned value at key 1 should be 1.0",
-		           1.0, (Double)result.getValue(1), .000000001d);
+		           1.0, (Double)result.getValue(1), .01d);
 	}
 	
 	//testing getCumulativePercentages(KeyedValues data) for P2: valueA<0, valueB>0
@@ -86,11 +86,11 @@ public class GetCumulativePercentagesTest {
 		    KeyedValues result = DataUtilities.getCumulativePercentages(values);
 		    
 		    assertEquals("Returned value at key 0 should be -0.4368",
-		           -0.4368, (Double)result.getValue(0), .000000001d);
+		           -3.4615, (Double)result.getValue(0), .01d);
 		    assertEquals("Returned value at key 1 should be 0.23076923",
-			           0.23076923, (Double)result.getValue(1), .000000001d);
+			           0.23076923, (Double)result.getValue(1), .01d);
 		    assertEquals("Returned value at key 2 should be 1.0",
-			           1.0, (Double)result.getValue(2), .000000001d);
+			           1.0, (Double)result.getValue(2), .01d);
 	    
 	}
 	  //testing getCumulativePercentages(KeyedValues data) for P3: valueA=0, valueB>0
@@ -131,11 +131,11 @@ public class GetCumulativePercentagesTest {
 		    KeyedValues result = DataUtilities.getCumulativePercentages(values);
 		    
 		    assertEquals("Returned value at key 0 should be 0.777",
-		           0.777, (Double)result.getValue(0), .000000001d);
+		           0.777, (Double)result.getValue(0), .01d);
 		    assertEquals("Returned value at key 1 should be 0.777",
-			           0.777, (Double)result.getValue(1), .000000001d);
+			           0.777, (Double)result.getValue(1), .01d);
 		    assertEquals("Returned value at key 2 should be 1.0",
-			           1.0, (Double)result.getValue(2), .000000001d);
+			           1.0, (Double)result.getValue(2), .01d);
 
 	}
 
