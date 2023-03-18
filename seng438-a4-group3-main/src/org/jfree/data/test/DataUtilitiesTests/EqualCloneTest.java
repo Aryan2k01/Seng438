@@ -126,6 +126,18 @@ public class EqualCloneTest{
         assertEquals(true, result);
         // tear-down: NONE in this test method
     }
+    
+    // Mutation Tests
+    
+    @Test (expected = IllegalArgumentException.class)
+    public void testNullMutant() {
+        // setup
+    	double[][] a = null;
+        
+        // exercise	
+        double[][] clone = DataUtilities.clone(a);
+    }
+    
 
 
     @After
