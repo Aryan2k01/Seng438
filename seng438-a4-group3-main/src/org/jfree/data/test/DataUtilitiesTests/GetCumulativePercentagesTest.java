@@ -138,5 +138,17 @@ public class GetCumulativePercentagesTest {
 			           1.0, (Double)result.getValue(2), .01d);
 
 	}
+	    
+	    // Mutation Tests.
+	    
+	    @Test (expected = IllegalArgumentException.class)
+		public void testPosCumulativePercentagesNullMutant() {
+			// setup
+		    
+	    	KeyedValues values = null;
+		    
+		    KeyedValues result = DataUtilities.getCumulativePercentages(values);
+		    
+		}
 
 }

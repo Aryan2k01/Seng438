@@ -17,6 +17,17 @@ public class GetUpperBoundTest {
         assertEquals("The upper bound of the range (-7,5) should be 5",
         5, exampleRange.getUpperBound(), 0);
     }
+    
+ // Mutation Tests
+ 	@Test
+ 	public void testUpperGetterMutation() {
+ 		assertEquals(5.0, this.exampleRange.getUpperBound(), .000000001d);
+ 	}
+ 	@Test
+ 	public void testUpperGetterTwice() {
+ 		double result = this.exampleRange.getUpperBound();
+ 		assertEquals(result, this.exampleRange.getUpperBound(), .000000001d);
+ 	}
 
     @After
     public void tearDown() throws Exception {

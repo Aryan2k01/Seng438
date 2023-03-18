@@ -96,6 +96,19 @@ public class CalculateColumnTotalTest{
         // tear-down: NONE in this test method
     }
     
+    //Mutation Tests
+    
+    @Test (expected = IllegalArgumentException.class)
+    public void calculateColumnTotalForNullMutant() {
+        // setup
+        Values2D data = null;
+        // exercise	
+        double result = DataUtilities.calculateColumnTotal(data, -1);
+        // verify
+        assertEquals(0.0, result, .000000001d);
+        // tear-down: NONE in this test method
+    }
+    
     @After
     public void tearDown() throws Exception {
     }

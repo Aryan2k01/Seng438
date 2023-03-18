@@ -205,6 +205,32 @@ public class ColumnRowTest2{
         assertEquals(0.0, result, .000000001d);
         // tear-down: NONE in this test method
     }
+    
+    // Mutation Tests
+    
+    @Test (expected = IllegalArgumentException.class)
+    public void calculateColumnTotalForNullMutant() {
+        // setup
+        Values2D data = null;
+        int[] validRows = {0};
+        // exercise	
+        double result = DataUtilities.calculateColumnTotal(data, 0, validRows);
+        // verify
+        assertEquals(7.5, result, .000000001d);
+        // tear-down: NONE in this test method
+    }
+    
+    @Test (expected = IllegalArgumentException.class)
+    public void calculateRowTotalForNullMutant() {
+        // setup
+        Values2D data = null;
+        int[] validRows = {0};
+        // exercise	
+        double result = DataUtilities.calculateRowTotal(data, 0, validRows);
+        // verify
+        assertEquals(7.5, result, .000000001d);
+        // tear-down: NONE in this test method
+    }
 
 
     @After
